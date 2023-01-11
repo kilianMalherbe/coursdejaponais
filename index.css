@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+body {
+    padding: 20px;
+    background-color: #ffeeee;
+}
+
+h1 {
+    color: #d05555;
+    padding-bottom: 40px;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+
+#playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#playlist .video {
+    height: 180px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas: "thumbnail title"
+                         "thumbnail description";
+    column-gap: 20px;
+}
+
+#playlist .video .videoThumbnail { 
+    grid-area: thumbnail;
+    height: 180px;
+    border-radius: 14px;
+}
+
+#playlist .video .videoTitle { 
+    grid-area: title;
+    color: #d05555;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+
+#playlist .video .videoDesc {
+    grid-area: description;
+    position: relative;
+    color: #6a4545;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden
+}
+
+#playlist .video .videoDesc::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 20px;
+    background: linear-gradient(#00000000, #ffeeee);
+}
+
+#layer {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+    background-color: #0000004e;
+}
+
+#layer #player {
+    width: 75%; height: 50%;
+    border: none;
+    border-radius: 14px;
+}
