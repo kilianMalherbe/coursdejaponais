@@ -1,4 +1,4 @@
-<img alt="Logo" src="/assets/logo.png" title="Logo" />
+<img width="75px" alt="Logo" src="/assets/logo.png" title="Logo" />
 
 # Cours de japonais
 
